@@ -19,7 +19,7 @@
             font-size: 2.5em;
             color: #0056b3;
             margin: 20px 0;
-            text-indent: 2em; /* 标题前方空两格 */
+            text-align: center; /* 标题水平居中 */
         }
         p {
             font-size: 1.2em;
@@ -51,10 +51,11 @@
             justify-content: center; /* 图片行居中 */
             margin: 20px auto;
             width: 70%; /* 图片行宽度 */
+            flex-wrap: wrap; /* 允许图片行换行 */
         }
         .small-image {
             width: 30%; /* 小图片宽度 */
-            margin: 0 1%; /* 图片间距 */
+            margin: 1%; /* 图片间距 */
             height: auto; /* 图片高度自适应 */
         }
         button {
