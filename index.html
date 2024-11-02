@@ -11,11 +11,9 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 使内容在主轴上居中 */
         }
         h1 {
             font-size: 2.5em;
@@ -25,13 +23,14 @@
         p {
             font-size: 1.2em;
             color: #555;
+            margin: 20px 0;
         }
         .video-container {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
             height: 0;
-            width: 80%;
-            margin: 20px auto;
+            width: 80%; /* 视频宽度调整为视口宽度的80% */
+            margin: 20px auto; /* 水平居中 */
         }
         .video-container video {
             position: absolute;
@@ -40,14 +39,16 @@
             width: 100%;
             height: 100%;
         }
-        img {
-            margin: 20px auto;
-            height: auto;
+        .full-image {
+            width: 80%; /* 完整图片宽度 */
+            margin: 20px auto; /* 水平居中 */
+            height: auto; /* 图片高度自适应 */
         }
         .small-image {
-            width: 30%; /* 小图片宽度 */
+            width: 24%; /* 小图片宽度 */
             display: inline-block; /* 使图片并排显示 */
-            margin: 10px;
+            margin: 1%; /* 图片间距 */
+            height: auto; /* 图片高度自适应 */
         }
         button {
             padding: 10px 20px;
@@ -63,59 +64,66 @@
             background-color: #003d82;
         }
         .text-description {
+            text-align: center;
             margin: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>MassV2X: A Multimodal Safety-critical Scenario Dataset at Consecutive Intersections for Vehicle-Infrastructure Cooperative Perception</h1>
-        <p>This is a simple page with images, videos, and links.</p>
+    <h1>MassV2X: A Multimodal Safety-critical Scenario Dataset at Consecutive Intersections for Vehicle-Infrastructure Cooperative Perception</h1>
+    <p>This is a simple page with images, videos, and links.</p>
 
-        <!-- Images -->
-        <img src="ph1.jpg" alt="Sample Image 1" class="small-image">
-        <img src="ph2.jpg" alt="Sample Image 2" class="small-image">
+    <!-- First Image -->
+    <img src="ph1.jpg" alt="Sample Image 1" class="full-image">
 
-        <div class="text-description">
-            <h2>Video Description 1</h2>
-            <p>This video showcases the first scenario...</p>
-        </div>
+    <!-- Second Image -->
+    <img src="ph2.jpg" alt="Sample Image 2" class="full-image">
 
-        <!-- First Video -->
-        <div class="video-container">
-            <video controls>
-                <source src="v1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+  
 
-        <div class="text-description">
-            <h2>Video Description 2</h2>
-            <p>This video demonstrates the second scenario...</p>
-        </div>
-
-        <!-- Second Video -->
-        <div class="video-container">
-            <video controls>
-                <source src="v2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-
-        <!-- Small Images Row -->
-        <img src="ph3.jpg" alt="Sample Image 3" class="small-image">
-        <img src="ph5.jpg" alt="Sample Image 5" class="small-image">
-        <img src="ph6.jpg" alt="Sample Image 6" class="small-image">
-        <img src="ph7.jpg" alt="Sample Image 7" class="small-image">
-
-        <!-- Buttons with Links -->
-        <a href="https://www.github.com/getting-started/github-pages" target="_blank">
-            <button>Use GitHub</button>
-        </a>
-        <br><br>
-        <a href="https://blog.csdn.net/WHYbeHERE/article/details/140378572" target="_blank">
-            <button>Create Website</button>
-        </a>
+    <div class="text-description">
+        <h2>Video Description 1</h2>
+        <p>This video showcases the first scenario...</p>
     </div>
+
+    <!-- First Video -->
+    <div class="video-container">
+        <video controls>
+            <source src="v1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="text-description">
+        <h2>Video Description 2</h2>
+        <p>This video demonstrates the second scenario...</p>
+    </div>
+
+    <!-- Second Video -->
+    <div class="video-container">
+        <video controls>
+            <source src="v2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+  <!-- Third Image -->
+    <img src="ph3.jpg" alt="Sample Image 3" class="full-image">
+
+    <!-- Fourth Image -->
+    <img src="ph4.jpg" alt="Sample Image 4" class="full-image">
+    
+    <!-- Small Images Row -->
+    <img src="ph5.jpg" alt="Sample Image 5" class="small-image">
+    <img src="ph6.jpg" alt="Sample Image 6" class="small-image">
+    <img src="ph7.jpg" alt="Sample Image 7" class="small-image">
+
+    <!-- Buttons with Links -->
+    <a href="https://www.github.com/getting-started/github-pages" target="_blank">
+        <button>Use GitHub</button>
+    </a>
+    <br><br>
+    <a href="https://blog.csdn.net/WHYbeHERE/article/details/140378572" target="_blank">
+        <button>Create Website</button>
+    </a>
 </body>
 </html>
