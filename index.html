@@ -6,10 +6,19 @@
     <title>My Web Page with Media and Links</title>
     <style>
         /* 添加一些简单的样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 使内容在主轴上居中 */
+        }
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
             height: 0;
+            width: 60%; /* 视频宽度调整为视口宽度的60% */
+            margin: 20px auto; /* 水平居中 */
         }
         .video-container video {
             position: absolute;
@@ -18,6 +27,13 @@
             width: 100%;
             height: 100%;
         }
+        img {
+            width: 60%; /* 图片宽度调整为视口宽度的60% */
+            margin: 20px auto; /* 水平居中 */
+        }
+        button {
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
@@ -25,7 +41,7 @@
     <p>This is a simple page with images, video, and links.</p>
 
     <!-- Image -->
-    <img src="image.jpg" alt="Sample Image" width="500">
+    <img src="image.jpg" alt="Sample Image">
 
     <!-- Video -->
     <div class="video-container">
@@ -37,11 +53,11 @@
 
     <!-- Buttons with Links -->
     <a href="https://www.github-zh.com/getting-started/github-pages" target="_blank">
-        <button>use github</button>
+        <button>Use GitHub</button>
     </a>
     <br><br>
     <a href="https://blog.csdn.net/WHYbeHERE/article/details/140378572" target="_blank">
-        <button>create website</button>
+        <button>Create Website</button>
     </a>
 
     <!-- You can add more content here -->
